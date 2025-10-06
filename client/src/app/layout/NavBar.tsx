@@ -1,6 +1,6 @@
 import { DarkMode, LightMode, ShoppingCart } from "@mui/icons-material";
 import { AppBar, Badge, Box, IconButton, List, ListItem, Toolbar, Typography } from "@mui/material";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const midLinks = [
   {title: 'catalog', path :'/catalog'},
@@ -53,7 +53,7 @@ export default function NavBar({darkMode, toggleDarkMode}: Props) {
         </List>
         </Box>
         <Box display='flex' alignItems={'center'}>
-          <IconButton size="large" sx={{color: 'inherit'}}>
+          <IconButton component={Link} to='/basket' size="large" sx={{color: 'inherit'}}>
           <Badge badgeContent='4' color='secondary'>
             <ShoppingCart/>
 
